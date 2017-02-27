@@ -19,7 +19,6 @@ if gmail.logged_in:
             email_subject = messages[i].subject
             email_body = messages[i].body
 
-
             trello_client = trolly.client.Client('[Trello API Key]', '[Trello OAuth Key]')
 
             for board in trello_client.get_boards():
@@ -39,4 +38,4 @@ if gmail.logged_in:
     else:
         print "No new bug reports"
 else:
-    print("Failed to log into Gmail")
+    print "Failed to log into Gmail"
